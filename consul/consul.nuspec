@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if ??? doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>consul</id>
+    <title>consul</title>
+    <version>0.4.1</version>
+    <authors>Mitchell Hashimoto, Armon Dadgar, HashiCorp</authors>
+    <owners>john.koepi</owners>
+    <summary>Consul is a tool for service discovery, monitoring and configuration.</summary>
+    <description>Consul is a tool for service discovery and configuration. Consul is distributed, highly available, and extremely scalable.
+      Consul provides several key features:
+
+      * Service Discovery - Consul makes it simple for services to register themselves and to discover other services via a DNS or HTTP interface. External services such as SaaS providers can be registered as well.
+      * Health Checking - Health Checking enables Consul to quickly alert operators about any issues in a cluster. The integration with service discovery prevents routing traffic to unhealthy hosts and enables service level circuit breakers.
+      * Key/Value Storage - A flexible key/value store enables storing dynamic configuration, feature flagging, coordination, leader election and more. The simple HTTP API makes it easy to use anywhere.
+      * Multi-Datacenter - Consul is built to be datacenter aware, and can support any number of regions without complex configuration.
+
+      Can optionally use C:\consul for configuration.
+
+      Example: choco install consul -ia '-server -bootstrap-expect 2 -base c:\Tools\Consul -bind ... -join ... -join ... -join ...'
+
+      Uses the nssm service wrapper to run as a service, license located at: http://nssm.cc
+    </description>
+    <projectUrl>http://www.consul.io</projectUrl>
+    <tags>consul service consul</tags>
+    <copyright>HashiCorp 2014</copyright>
+    <licenseUrl>https://github.com/hashicorp/consul/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://raw.github.com/__CHOCO_PKG_OWNER_REPO__/master/consul/consul.png</iconUrl>-->
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="nssm" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files> 
+</package>
